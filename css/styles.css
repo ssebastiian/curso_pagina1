@@ -7,10 +7,20 @@
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
+/*efecto del scroll de paginado de secciones*/
+.servicio,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
 *,*::before, *::after{
     box-sizing: inherit;
-}
+} 
 body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
@@ -147,6 +157,7 @@ h1,h2,h3{
     display: flex;
     align-items: flex-end;
 }
+
 @media (min-width:768px) {
     .servicios{
         display: grid;
